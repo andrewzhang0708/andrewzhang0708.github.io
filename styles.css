@@ -1,107 +1,65 @@
-html {
-	scroll-behavior: smooth;
+:root { color-scheme: light; --surface: #fff; --muted: #666; --accent: #111; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 104px; }
+body { margin: 0; background: #fff; color: #111; font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.skip-link { position: fixed; left: 20px; top: -80px; padding: 12px 20px; background: var(--surface); z-index: 100; }
+.skip-link:focus { top: 12px; }
+.site-header { position: sticky; top: 0; z-index: 10; min-height: 76px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #fff; border-bottom: 1px solid #e5e5e5; }
+.brand { font-size: 18px; font-weight: 700; }
+.site-nav { display: flex; gap: 28px; flex-wrap: wrap; }
+.site-nav a { font-size: 15px; font-weight: 600; padding: 6px 0; }
+.site-nav a:hover, .brand:hover { text-decoration: underline; text-underline-offset: 4px; }
+.page-section { padding: 40px max(4vw, 24px) 32px; }
+.section-shell { max-width: 1100px; margin-inline: auto; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.section-heading h1, .section-heading h2 { margin: 0; font-size: clamp(2rem, 3vw, 3rem); line-height: 1.2; font-weight: 700; }
+.section-heading p, .intro { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
+.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.project-card { display: block; min-width: 0; background: var(--surface); border: 1px solid #e5e5e5; transition: border-color .2s ease; }
+.project-card:hover { border-color: #999; }
+.project-card img { display: block; width: 100%; aspect-ratio: 1.6; object-fit: cover; }
+.card-caption { padding: 16px 15px 18px; }
+.card-caption h3 { margin: 0 0 6px; font-size: 16px; font-weight: 500; line-height: 1.35; }
+.card-caption p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.4; }
+.image-placeholder { display: grid; place-items: center; overflow: hidden; aspect-ratio: 1.6; background: #f5f5f5; }
+.image-placeholder span { font-size: 13px; color: var(--muted); }
+.contact-panel { background: var(--surface); border: 1px solid #e5e5e5; padding: 24px; }
+.contact-panel h3 { margin: 0 0 10px; font-size: 18px; font-weight: 500; }
+.contact-panel p { margin: 0; color: var(--muted); line-height: 1.7; }
+.site-footer { border-top: 1px solid #e5e5e5; margin-top: 32px; padding: 24px max(4vw, 24px); color: var(--muted); font-size: 13px; }
+.detail-page { padding: 0 max(4vw, 24px) 48px; }
+.detail-toolbar { max-width: 1100px; margin: 0 auto; display: flex; justify-content: flex-end; padding: 22px 0 12px; }
+.back-link { display: inline-flex; align-items: center; gap: 9px; padding: 10px 16px; border: 1px solid #e5e5e5; font-size: 14px; background: #fff; }
+.back-link:hover { border-color: var(--accent); color: var(--accent); }
+.project-detail { max-width: 1100px; margin-inline: auto; }
+.detail-heading { text-align: center; margin: 0 auto 16px; }
+.detail-heading h1 { margin: 0 0 10px; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; letter-spacing: -.025em; }
+.project-meta, .project-role { margin: 6px 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.project-role { font-style: italic; }
+.project-description { max-width: 900px; margin: 16px auto 22px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.gallery-grid figure { margin: 0; }
+.gallery-grid .image-placeholder, .gallery-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: grid; }
+@media (max-width: 900px) {
+ .card-grid, .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .section-heading p { font-size: 15px; }
 }
-
-* {
-	box-sizing: border-box;
+@media (max-width: 600px) {
+ html { scroll-padding-top: 132px; }
+ .site-header { align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px 20px; }
+ .site-nav { gap: 22px; }
+ .site-nav a { font-size: 14px; }
+ .page-section { padding: 32px 20px 16px; }
+ .section-heading { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+ .card-grid, .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
+ .detail-page { padding-inline: 20px; }
+ .detail-toolbar { padding-top: 16px; padding-bottom: 24px; }
+ .detail-heading h1 { font-size: 28px; }
+ .project-description { margin: 22px auto; }
 }
-
-body {
-	margin: 0;
-	background: #ffffff;
-	color: #111111;
-	font-family: Arial, Helvetica, sans-serif;
-	padding-top: 76px;
-}
-
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-.site-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 76px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 32px;
-	background: #ffffff;
-	border-bottom: 1px solid #e5e5e5;
-	z-index: 1000;
-}
-
-.brand {
-	font-size: 1.125rem;
-	font-weight: 700;
-	letter-spacing: 0.01em;
-}
-
-.site-nav {
-	display: flex;
-	align-items: center;
-	gap: 28px;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-}
-
-.site-nav a {
-	font-size: 0.98rem;
-	font-weight: 600;
-	padding-bottom: 2px;
-}
-
-.site-nav a:hover,
-.site-nav a:focus-visible,
-.brand:hover,
-.brand:focus-visible {
-	text-decoration: underline;
-	text-underline-offset: 4px;
-}
-
-.page-section {
-	min-height: calc(100vh - 76px);
-	padding: 32px;
-}
-
-.home-section {
-	min-height: 100vh;
-}
-
-.section-shell {
-	max-width: 1100px;
-	margin: 0 auto;
-}
-
-.page-section h1 {
-	margin: 0;
-	font-size: clamp(2rem, 3vw, 3rem);
-	font-weight: 700;
-}
-
-@media (max-width: 720px) {
-	body {
-		padding-top: 104px;
-	}
-
-	.site-header {
-		height: auto;
-		min-height: 104px;
-		padding: 16px 20px;
-		align-items: flex-start;
-		gap: 12px;
-		flex-direction: column;
-	}
-
-	.site-nav {
-		gap: 16px;
-		justify-content: flex-start;
-	}
-
-	.page-section {
-		padding: 24px 20px;
-	}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ .project-card { transition: none; }
 }
