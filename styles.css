@@ -70,3 +70,24 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .project-credits li { margin: 4px 0; }
 .project-context a { text-decoration: underline; text-underline-offset: 3px; }
 .photos-heading { margin-top: 32px; }
+
+.home-intro { padding-top: clamp(40px, 7vw, 80px); padding-bottom: 40px; }
+.intro-heading, .intro-bio { max-width: 780px; }
+.intro-heading h1 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 56px); line-height: 1.15; letter-spacing: -.025em; }
+.intro-identity { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.intro-tagline { margin: 24px 0 28px; font-size: clamp(22px, 3vw, 30px); line-height: 1.4; }
+.intro-bio { color: #444; font-size: 16px; line-height: 1.8; overflow-wrap: break-word; }
+.intro-bio p { margin: 0 0 18px; }
+.intro-bio .intro-greeting { color: var(--accent); font-size: 20px; }
+.intro-bio strong { font-weight: 600; }
+.intro-bio a, .intro-links a { text-decoration: underline; text-underline-offset: 4px; }
+.intro-links { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 26px; font-size: 15px; }
+
+.intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); gap: clamp(28px, 4vw, 56px); align-items: start; }
+.intro-profile { margin: 0; min-width: 0; }
+.intro-profile img { display: block; width: 100%; height: auto; }
+.intro-profile figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+@media (max-width: 800px) {
+ .intro-layout { grid-template-columns: 1fr; }
+ .intro-profile { width: 100%; max-width: 360px; }
+}
