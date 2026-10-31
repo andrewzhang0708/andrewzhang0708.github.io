@@ -6,4 +6,13 @@ Storytelling with imagination and computation.
 
 ## Bio
 
-Hello! My name is Andrew Zhang, an undergraduate student at the University of California, Santa Barbara. I have three majors: Computer Science, Mathematics, and Theater with a concentration in directing. 
+Hi, I'm Andrew Zhang from Beijing, China!
+
+I'm an undergraduate at UC Santa Barbara studying **Computer Science, Mathematics, and Theater (Directing)**. I'm passionate about exploring how emerging technologies can transform storytelling, performance, and human authoring.
+
+As both a developer and theater artist, I create and study interactive experiences that invite audiences to become active participants in the stories they encounter. My current research includes *Becoming Prospero*, a first-person VR adaptation of Shakespeare's *The Tempest*. I am also developing a theoretical research project, *All The (Virtual) World's A Stage: Enabling Audience Participation in VR Theater*, where I propose a framework in designing audience participation in XR theatrical productions.
+
+I have acted and directed across the globe. Check out *The Tempest Lazzaretto* and *Othello* with Prague Shakespeare Company (Prague, Venice Shakespeare Festival, Ediburgh Fringe Festival) and my other projects at UCSB.
+
+My Capstone Project in computer science is *Planet Story Explorer*. We collaborated with Planet Labs to build an interactive platform for viewing Satelitte Imageries, with context enhanced by visual language models.
+

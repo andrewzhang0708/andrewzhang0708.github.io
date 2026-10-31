@@ -63,3 +63,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
  html { scroll-behavior: auto; }
  .project-card { transition: none; }
 }
+
+.project-credits, .project-context { max-width: 900px; margin: 24px auto; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.project-credits h2, .project-context h2, .photos-heading { margin: 0 0 12px; color: var(--accent); font-size: 18px; font-weight: 500; }
+.project-credits ul { list-style: none; margin: 0; padding: 0; }
+.project-credits li { margin: 4px 0; }
+.project-context a { text-decoration: underline; text-underline-offset: 3px; }
+.photos-heading { margin-top: 32px; }
