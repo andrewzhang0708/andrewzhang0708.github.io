@@ -218,3 +218,32 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
  .home-page .intro-bio { grid-column: 1; grid-row: 3; }
  .home-page .intro-tagline { margin-bottom: 0; }
 }
+
+/* Extended Becoming Prospero write-up. */
+.project-page .prospero-writeup { max-width: 75ch; margin-top: 32px; color: #cec9c2; font-size: 16px; line-height: 1.75; overflow-wrap: break-word; }
+.prospero-writeup h2 { margin: 36px 0 14px; padding-top: 24px; border-top: 0; color: var(--accent); font-size: 22px; font-weight: 500; line-height: 1.3; }
+.prospero-writeup p { margin: 0 0 18px; }
+.prospero-writeup ul { padding-left: 24px; }
+.prospero-writeup li { margin-bottom: 14px; }
+.prospero-writeup strong { color: #eee8df; font-weight: 600; }
+.prospero-writeup a { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+
+.project-page .prospero-status { color: #eee8df; font-size: 16px; line-height: 1.75; margin: 0 0 18px; }
+.project-page .prospero-status strong { font-weight: 600; }
+
+/* Embedded demo beside the Becoming Prospero title. */
+.prospero-demo-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; margin: 28px 0 32px; padding-bottom: 26px; border-bottom: 0; }
+.project-page .prospero-demo-layout .detail-heading { margin: 0; padding: 0; border: 0; }
+.prospero-demo { margin: 0; min-width: 0; }
+.prospero-demo iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #080808; }
+.prospero-demo figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+@media (max-width: 800px) {
+ .prospero-demo-layout { grid-template-columns: 1fr; }
+}
+
+/* Keep the entire Prospero introduction beside the demo. */
+.project-page .prospero-intro-copy .detail-heading { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.project-page .prospero-intro-copy .project-description { margin-bottom: 24px; }
+.prospero-technologies { color: #eee8df; font-size: 16px; line-height: 1.75; }
+.prospero-technologies p { margin: 0; }
+.prospero-technologies strong { font-weight: 600; }
