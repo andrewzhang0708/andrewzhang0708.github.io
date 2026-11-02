@@ -159,3 +159,62 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
  .contact-details dl { grid-template-columns: 1fr; gap: 8px; }
  .contact-details dd { margin-bottom: 16px; }
 }
+
+/* Opening quotation on the Theater listing only. */
+.theater-quote { text-align: center; margin: -8px 0 40px; color: var(--accent); font-family: 'Times New Roman', Times, serif; font-size: clamp(22px, 3vw, 30px); font-style: normal; line-height: 1.45; }
+.theater-quote p { margin: 0; }
+
+.theater-quote .quote-source { margin-top: 10px; text-align: right; color: var(--accent); font-size: 15px; line-height: 1.5; }
+.theater-quote .quote-source cite { font-style: italic; }
+
+/* Shared project detail design. These rules do not apply to the homepage. */
+.project-page .project-detail { max-width: var(--page-width); margin-inline: auto; }
+.project-page main.page-section { padding-top: 36px; padding-bottom: 64px; }
+.project-page .category-back { display: inline-block; padding-block: 8px; text-decoration: none; }
+.project-page .category-back:hover { text-decoration: underline; text-underline-offset: 4px; }
+.project-page .detail-heading { text-align: left; margin: 28px 0 32px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+.project-page .detail-heading h1 { max-width: 25ch; margin-bottom: 18px; color: #f3ede4; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; font-weight: 600; letter-spacing: -.035em; overflow-wrap: break-word; }
+.project-page .project-meta, .project-page .project-role { color: var(--muted); font-size: 14px; line-height: 1.75; }
+.project-page .project-role { color: var(--accent); }
+.project-page .project-description, .project-page .project-context, .project-page .project-credits { max-width: 75ch; margin: 0 0 24px; color: #cec9c2; font-size: 16px; line-height: 1.75; }
+.project-page .project-credits h2, .project-page .project-context h2, .project-page .photos-heading { color: var(--accent); font-size: 18px; font-weight: 500; margin-bottom: 14px; }
+.project-page .project-credits li { margin-block: 6px; }
+.project-page .project-context a { color: var(--accent); }
+.project-page .photos-heading { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.project-page .gallery-grid { gap: 20px; }
+.project-page .gallery-grid img { display: block; height: auto; }
+.project-page .gallery-grid figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+@media (max-width: 600px) {
+ .project-page main.page-section { padding-top: 24px; padding-bottom: 40px; }
+ .project-page .detail-heading { margin-top: 20px; padding-bottom: 20px; }
+}
+
+/* Poster beside the UCSB Tempest introduction. */
+.tempest-poster-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
+.project-page .tempest-poster-layout .detail-heading { margin-top: 0; }
+.tempest-poster { margin: 0; }
+.tempest-poster img { display: block; width: 100%; height: auto; }
+.tempest-poster figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+@media (max-width: 800px) {
+ .tempest-poster-layout { grid-template-columns: 1fr; }
+ .tempest-poster { width: min(100%, 360px); }
+}
+
+/* Full-size project photographs with an accessible return control. */
+.photo-viewer { position: fixed; inset: 0; width: 100%; max-width: none; height: 100%; height: 100dvh; max-height: none; margin: 0; padding: 64px 20px 20px; border: 0; box-sizing: border-box; background: #15100f; color: #eee8df; }
+.photo-viewer[open] { display: flex; align-items: center; justify-content: center; }
+.photo-viewer::backdrop { background: #15100f; }
+.photo-viewer > img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.photo-viewer-back { position: absolute; top: max(12px, env(safe-area-inset-top)); left: max(16px, env(safe-area-inset-left)); display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: #eee8df; font: 32px/1 Arial, sans-serif; cursor: pointer; }
+.photo-viewer-back:hover { color: #a5bbc9; }
+.photo-viewer-back:focus-visible { outline: 2px solid #a5bbc9; outline-offset: 2px; }
+
+/* Mobile home: tagline, portrait, then recent work. Desktop stays unchanged. */
+@media (max-width: 900px) {
+ .home-page .intro-copy { display: contents; }
+ .home-page .intro-heading { grid-column: 1; grid-row: 1; }
+ .home-page .intro-profile { grid-column: 1; grid-row: 2; width: min(100%, 520px); margin: 0 auto; }
+ .home-page .intro-profile img { width: 100%; height: auto; }
+ .home-page .intro-bio { grid-column: 1; grid-row: 3; }
+ .home-page .intro-tagline { margin-bottom: 0; }
+}
