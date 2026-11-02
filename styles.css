@@ -257,8 +257,71 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .research-project .project-credits,
 .research-project .research-writeup { max-width: none; }
 
-/* Keep category headings and navigation aligned across short and long pages. */
-html:has(body.category-page) { scrollbar-gutter: stable; }
-@supports not (scrollbar-gutter: stable) {
- html:has(body.category-page) { overflow-y: scroll; }
+
+/* Align inner pages to Home's viewport-based content edges, even with a scrollbar. */
+body.category-page, body.project-page { overflow-x: clip; }
+.portfolio-home.category-page > .site-header,
+.portfolio-home.project-page > .site-header,
+.portfolio-home.category-page > main,
+.portfolio-home.project-page > main { width: 100vw; box-sizing: border-box; }
+
+.portfolio-home.category-page > .site-header,
+.portfolio-home.project-page > .site-header { padding-inline: max(calc((100vw - var(--page-width)) / 2), 4vw, 24px); }
+@media (max-width: 600px) {
+ .portfolio-home.category-page > .site-header,
+ .portfolio-home.project-page > .site-header { padding-inline: 20px; }
 }
+
+/* All Worlds opening credits, with space reserved for future media. */
+.allworlds-credits { color: #cec9c2; font-size: 16px; line-height: 1.75; }
+.allworlds-credits p { margin: 0; }
+.allworlds-credits strong { color: #eee8df; font-weight: 600; }
+@media (max-width: 800px) { .allworlds-media-space { display: none; } }
+
+/* All Worlds has no opening media yet; use the full content width. */
+.allworlds-intro-layout { grid-template-columns: minmax(0, 1fr); }
+.allworlds-intro-layout .allworlds-media-space { display: none; }
+.project-page .allworlds-intro-layout .detail-heading h1 { max-width: none; }
+
+.project-page .allworlds-intro-layout .detail-heading { border-bottom: 0; padding-bottom: 0; }
+.allworlds-divider { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+
+/* Tumbleweed Country title image. */
+.weed-title-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 380px); gap: clamp(28px, 4vw, 56px); align-items: center; margin: 28px 0 32px; }
+.project-page .weed-title-layout .detail-heading { margin: 0; }
+.weed-main-image { margin: 0; }
+.weed-main-image img { display: block; width: 100%; height: auto; }
+@media (max-width: 800px) { .weed-title-layout { grid-template-columns: 1fr; } }
+
+.weed-title-layout { align-items: start; }
+.project-page .weed-intro-copy .detail-heading { margin-bottom: 24px; }
+
+.weed-watch { margin-top: 28px; }
+.weed-watch h2 { color: var(--accent); font-size: 18px; font-weight: 500; margin: 0 0 14px; }
+.weed-watch iframe { display: block; width: 100%; height: 320px; border: 0; background: var(--surface); }
+.weed-watch p { margin-top: 10px; font-size: 13px; }
+.weed-watch a { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Theater project coverage and Othello opening image. */
+.othello-intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 380px); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
+.project-page .othello-intro-layout .detail-heading { margin-top: 0; }
+.othello-image { margin: 0; }
+.othello-image img { display: block; width: 100%; height: auto; }
+.project-media { margin-block: 32px; max-width: 75ch; }
+.project-media h2 { color: var(--accent); font-size: 18px; font-weight: 500; margin-bottom: 14px; }
+.project-media p { font-size: 15px; line-height: 1.7; }
+.project-media a { color: #cec9c2; text-decoration: underline; text-underline-offset: 4px; }
+.project-media a:hover { color: var(--accent); }
+@media (max-width: 800px) { .othello-intro-layout { grid-template-columns: 1fr; } }
+
+.tempest-venice-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 380px); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
+.project-page .tempest-venice-layout .detail-heading { margin-top: 0; }
+.tempest-venice-main { margin: 0; }
+.tempest-venice-main img { display: block; width: 100%; height: auto; }
+@media (max-width: 800px) { .tempest-venice-layout { grid-template-columns: 1fr; } }
+
+.words3-intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 380px); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
+.project-page .words3-intro-layout .detail-heading { margin-top: 0; }
+.words3-main { margin: 0; }
+.words3-main img { display: block; width: 100%; height: auto; }
+@media (max-width: 800px) { .words3-intro-layout { grid-template-columns: 1fr; } }

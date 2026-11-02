@@ -12,7 +12,7 @@ function walk(dir) {
     const photosDir = path.join(dir, stem);
     if (!fs.existsSync(photosDir) || !fs.statSync(photosDir).isDirectory()) continue;
     const photos = fs.readdirSync(photosDir, { withFileTypes: true })
-      .filter(item => item.isFile() && /\.(jpe?g|png|webp|avif)$/i.test(item.name) && !/poster/i.test(item.name))
+      .filter(item => item.isFile() && /\.(jpe?g|png|webp|avif)$/i.test(item.name) && !/poster/i.test(item.name) && !/^imagemain./i.test(item.name))
       .map(item => item.name).sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
     if (!photos.length) continue;
     const html = fs.readFileSync(file, 'utf8');
