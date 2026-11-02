@@ -220,7 +220,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 }
 
 /* Extended Becoming Prospero write-up. */
-.project-page .prospero-writeup { max-width: 75ch; margin-top: 32px; color: #cec9c2; font-size: 16px; line-height: 1.75; overflow-wrap: break-word; }
+.project-page .prospero-writeup { max-width: none; margin-top: 32px; color: #cec9c2; font-size: 16px; line-height: 1.75; overflow-wrap: break-word; }
 .prospero-writeup h2 { margin: 36px 0 14px; padding-top: 24px; border-top: 0; color: var(--accent); font-size: 22px; font-weight: 500; line-height: 1.3; }
 .prospero-writeup p { margin: 0 0 18px; }
 .prospero-writeup ul { padding-left: 24px; }
@@ -247,3 +247,18 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .prospero-technologies { color: #eee8df; font-size: 16px; line-height: 1.75; }
 .prospero-technologies p { margin: 0; }
 .prospero-technologies strong { font-weight: 600; }
+
+/* Reset intrinsic image heights so all category covers share the card ratio. */
+.category-page .project-card img { width: 100%; height: auto; aspect-ratio: 1.6; object-fit: cover; }
+
+/* Research detail text spans the available content width. */
+.research-project .project-description,
+.research-project .project-context,
+.research-project .project-credits,
+.research-project .research-writeup { max-width: none; }
+
+/* Keep category headings and navigation aligned across short and long pages. */
+html:has(body.category-page) { scrollbar-gutter: stable; }
+@supports not (scrollbar-gutter: stable) {
+ html:has(body.category-page) { overflow-y: scroll; }
+}

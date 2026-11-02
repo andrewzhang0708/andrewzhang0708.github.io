@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2559" height="1449" viewBox="0 0 1200 679.484">
+  <title>All the (Virtual) World's a Stage — conceptual illustration</title>
+  <desc>An abstract audience member connects to a character inside an open theatrical space. Narrative, Interaction, and Relationships are supporting themes, not a validated framework.</desc>
+  <rect width="1200" height="679.484" fill="#15100f"/>
+  <!-- An open stage, rather than a box or a framework diagram. -->
+  <g fill="none" stroke="#a5bbc9" stroke-width="2">
+    <path d="M680 214 823 152 966 214M680 214V410M966 214V410" opacity=".44"/>
+    <path d="m664 418 159 70 159-70M680 410l143-62 143 62" opacity=".28"/>
+    <path d="M823 152v56" opacity=".2"/>
+  </g>
+  <!-- Audience: a seated, quiet silhouette. -->
+  <g fill="#a5bbc9">
+    <circle cx="352" cy="284" r="29"/>
+    <path d="M303 370v-23a49 49 0 0 1 98 0v23z"/>
+  </g>
+  <g fill="none" stroke="#a5bbc9" stroke-width="3" stroke-linecap="round" opacity=".6">
+    <path d="M294 365v39h116v-39M310 404v29M394 404v29"/>
+  </g>
+  <!-- A restrained connection suggests entering a role, without causal claims. -->
+  <g fill="none" stroke="#a5bbc9" stroke-width="2">
+    <path d="M424 333C521 295 604 295 710 333" opacity=".5"/>
+    <path d="M424 350C521 388 604 388 710 350" opacity=".22"/>
+  </g>
+  <circle cx="563" cy="312" r="4" fill="#eee8df"/>
+  <!-- Character: the same person, now expressive and within the scene. -->
+  <g fill="#eee8df">
+    <circle cx="823" cy="264" r="29"/>
+    <path d="M796 309q27-15 54 0l14 67h-82z"/>
+  </g>
+  <g fill="none" stroke="#eee8df" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m800 318-40 32-25-15M846 318l35-25 13-32M804 376l-12 49M842 376l16 49"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g font-size="32" fill="#eee8df">
+      <text x="352" y="496">Audience</text>
+      <text x="823" y="544">Character</text>
+    </g>
+    <g font-size="25" fill="#a5bbc9" letter-spacing="1">
+      <text x="352" y="603">Narrative</text>
+      <text x="588" y="603">Interaction</text>
+      <text x="852" y="603">Relationships</text>
+    </g>
+  </g>
+</svg>
