@@ -330,3 +330,23 @@ body.category-page, body.project-page { overflow-x: clip; }
 @media (max-width: 800px) { .words3-intro-layout { grid-template-columns: 1fr; } }
 
 .technical-coming-soon { margin: 48px 0 64px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 18px; font-weight: 400; line-height: 1.7; }
+
+/* Planet Story Explorer case study: readable text and full interface figures. */
+.project-page.planet-project .project-detail { max-width: 1100px; }
+.planet-subtitle { color: #cec9c2; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; margin: 0 0 20px; }
+.planet-technologies { max-width: 750px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.planet-section { margin: 36px 0 48px; color: #cec9c2; font-size: 16px; line-height: 1.75; overflow-wrap: break-word; }
+.planet-section + .planet-section { padding-top: 28px; border-top: 1px solid var(--line); }
+.planet-section h2 { max-width: 750px; margin: 0 0 18px; color: var(--accent); font-size: clamp(20px, 2.5vw, 24px); font-weight: 500; line-height: 1.35; }
+.planet-section p { max-width: 750px; margin: 0 0 18px; }
+.planet-section strong { color: #eee8df; font-weight: 600; }
+.planet-figure { margin: 28px 0 0; }
+.planet-figure a { display: block; }
+.planet-figure img { display: block; width: 100%; height: auto; }
+.planet-figure figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.planet-newsletter { max-width: 900px; margin-inline: auto; }
+@media (max-width: 600px) {
+ .planet-section { margin-block: 28px 36px; }
+ .planet-section + .planet-section { padding-top: 24px; }
+ .planet-figure { margin-top: 22px; }
+}

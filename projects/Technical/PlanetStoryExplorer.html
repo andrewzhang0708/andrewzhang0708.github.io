@@ -1,2 +1,47 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="color-scheme" content="dark"><title>Planet Story Explorer | Andrew Zhang</title><link rel="stylesheet" href="../../styles.css"><script data-goatcounter="https://andrewzhang0708.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-</head><body class="portfolio-home project-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="../../index.html">Andrew Zhang</a><nav class="site-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../research.html">Research</a><a href="../../theater.html">Theater</a><a href="../../technical.html" aria-current="page">Technical</a><a href="../../contact.html">Contact</a></nav></header><main id="main" class="page-section"><article class="project-detail"><a class="category-back" href="../../technical.html">&larr; Technical</a><header class="detail-heading"><h1>Planet Story Explorer</h1><p class="project-meta">Team capstone &middot; Planet Labs</p></header><p class="project-description">An interactive platform for exploring satellite imagery and video stories, with context enhanced by visual language models. Developed as a team computer science capstone in collaboration with Planet Labs.</p></article></main></body></html>
+</head><body class="portfolio-home project-page planet-project"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="../../index.html">Andrew Zhang</a><nav class="site-nav" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../research.html">Research</a><a href="../../theater.html">Theater</a><a href="../../technical.html" aria-current="page">Technical</a><a href="../../contact.html">Contact</a></nav></header><main id="main" class="page-section"><article class="project-detail"><a class="category-back" href="../../technical.html">&larr; Technical</a><header class="detail-heading"><h1>Planet Story Explorer</h1>
+<p class="planet-subtitle"><em>Discovering the Stories Behind Satellite Imagery</em></p>
+<p class="project-meta">Technical / Software Development<br>UCSB Computer Science Capstone &middot; In collaboration with Planet Labs &middot; 2025&ndash;2026</p>
+<p class="project-role">Role: Backend Developer &amp; Outreach Lead</p>
+<p class="planet-technologies"><strong>Technologies:</strong> Python, FastAPI, Semantic Search, Sentence Transformers, Gemini, Geocoding, Database Systems</p></header>
+<section class="planet-section">
+<h2>Overview</h2>
+<p>Satellite imagery offers a unique perspective on our changing planet, capturing everything from environmental transformations to human activities across the globe. Yet behind each image lies a story that may be difficult to discover, understand, or connect with.</p>
+<p>In collaboration with Planet Labs, our capstone team developed <strong>Planet Story Explorer</strong>, a web platform designed to make satellite imagery and its associated stories more accessible, searchable, and meaningful.</p>
+<p>Our goal was to go beyond displaying satellite imagery: we wanted to help people discover the stories behind the images and understand their connections to the world around us.</p>
+</section>
+<section class="planet-section">
+<h2>Discovering Stories Through Search</h2>
+<p>With tens of thousands of satellite stories available, finding relevant content can be challenging, especially when users do not know exactly what they are looking for.</p>
+<p>We developed a search system that combines traditional keyword matching with <strong>semantic search powered by Sentence Transformers</strong>, allowing users to discover stories through natural-language queries rather than relying solely on exact keywords.</p>
+<p>The platform also supports advanced filtering and geographic exploration, helping users navigate stories through locations, descriptions, and visual content.</p>
+<p>By combining multiple ways to search and browse, we aimed to transform a large collection of satellite imagery into an accessible space for exploration and discovery.</p>
+<figure class="planet-figure"><a href="PlanetStoryExplorer/Gallery.png" target="_blank" rel="noopener noreferrer" aria-label="View screenshot at full resolution (opens in a new tab)"><img src="PlanetStoryExplorer/Gallery.png" width="2358" height="1125" alt="Satellite story gallery with search, geographic filters, and visual story cards." loading="lazy" decoding="async"></a><figcaption>Exploring satellite stories through search, geographic information, and visual browsing.</figcaption></figure>
+</section>
+<section class="planet-section">
+<h2>Understanding the Context Behind Each Image</h2>
+<p>A satellite image can show us <em>what</em> a place looks like, but understanding <em>why</em> it matters often requires additional context.</p>
+<p>Each story in Planet Story Explorer brings together its original satellite imagery or video, geographic information, author-provided descriptions, and AI-generated summaries.</p>
+<p>Rather than presenting visual data in isolation, the platform connects each image to a broader story through locations, descriptions, and contextual information.</p>
+<p>This approach makes it easier for users not only to find interesting satellite imagery, but also to understand and appreciate the stories it represents.</p>
+<figure class="planet-figure"><a href="PlanetStoryExplorer/story-detail.png" target="_blank" rel="noopener noreferrer" aria-label="View screenshot at full resolution (opens in a new tab)"><img src="PlanetStoryExplorer/story-detail.png" width="2559" height="1347" alt="Sunny Park satellite story with video, geographic metadata, description, and AI Summary." loading="lazy" decoding="async"></a><figcaption>A satellite story presented with its original visual content, geographic metadata, and AI-generated context.</figcaption></figure>
+</section>
+<section class="planet-section">
+<h2>Behind the Scenes: Backend Architecture</h2>
+<p>To support these experiences, we developed a backend pipeline for retrieving, enriching, storing, and searching satellite stories.</p>
+<p>The system integrates data from the <strong>Planet API</strong>, reverse geocoding through <strong>Nominatim</strong>, and AI-assisted metadata generation using <strong>Gemini</strong>.</p>
+<p>By connecting satellite imagery with geographic data and generated descriptions, the pipeline enriches stories with location names, descriptive metadata, keywords, and vector embeddings.</p>
+<p>These enriched records are stored in the database and made accessible through our backend search and ranking system, combining keyword-based retrieval with semantic similarity.</p>
+<p>My work as a backend developer and outreach lead contributed to the broader goal of making a technically complex collection of satellite data easier for people to explore and engage with.</p>
+<figure class="planet-figure"><a href="PlanetStoryExplorer/backend-pipeline.png" target="_blank" rel="noopener noreferrer" aria-label="View backend architecture at full resolution (opens in a new tab)"><img src="PlanetStoryExplorer/backend-pipeline.png" width="1161" height="366" alt="Backend pipeline connecting Planet API, thumbnail retrieval, Nominatim geocoding, Gemini enrichment, database storage, vector embeddings, and search ranking." loading="lazy" decoding="async"></a><figcaption>Backend architecture connecting satellite data ingestion, geographic enrichment, AI-generated metadata, and semantic search.</figcaption></figure>
+</section>
+<section class="planet-section">
+<h2>From Exploration to Storytelling: AI-Generated Newsletters</h2>
+<p>Beyond helping users discover existing stories, we also explored how AI could help communicate them to a broader audience.</p>
+<p>We developed a newsletter generation feature that transforms selected satellite stories into editorial-style publications, combining satellite imagery with contextual information, supplementary visuals, and accessible narratives.</p>
+<p>One example, <strong>The Planet Times: Four Seasons in Hakodate, Japan</strong>, presents satellite observations of seasonal change alongside information about the city's geography, climate, and cultural background.</p>
+<p>The newsletter includes source credits and references to the original story, encouraging readers to continue exploring through Planet Story Explorer.</p>
+<p>As both a backend developer and outreach lead, I was especially interested in the connection between technical infrastructure and public storytelling: how systems built for retrieving and organizing information can also help people discover meaningful stories about our planet.</p>
+<figure class="planet-figure planet-newsletter"><a href="PlanetStoryExplorer/Newsletter.png" target="_blank" rel="noopener noreferrer" aria-label="View newsletter at full resolution (opens in a new tab)"><img src="PlanetStoryExplorer/Newsletter.png" width="1604" height="1248" alt="The Planet Times three-column newsletter about seasonal changes in Hakodate, Japan." loading="lazy" decoding="async"></a><figcaption>The Planet Times: An AI-generated newsletter connecting satellite imagery with geographic, historical, and cultural context.</figcaption></figure>
+</section>
+</article></main></body></html>
