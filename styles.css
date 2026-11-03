@@ -333,7 +333,7 @@ body.category-page, body.project-page { overflow-x: clip; }
 
 /* Planet Story Explorer case study: readable text and full interface figures. */
 .project-page.planet-project .project-detail { max-width: 1100px; }
-.planet-intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 510px); gap: clamp(24px, 4vw, 48px); align-items: center; }
+.planet-intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: clamp(24px, 4vw, 48px); align-items: center; }
 .planet-intro-copy { min-width: 0; }
 .planet-main { margin: 0; overflow: hidden; border-radius: 18px; aspect-ratio: 537 / 407; }
 .planet-main img { display: block; width: 105.59%; max-width: none; height: auto; margin-left: -2.79%; margin-top: -1.86%; }
