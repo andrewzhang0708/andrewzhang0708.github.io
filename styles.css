@@ -181,6 +181,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .project-page .project-credits li { margin-block: 6px; }
 .project-page .project-context a { color: var(--accent); }
 .project-page .photos-heading { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.project-page .photos-heading:has(.photo-credit) { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+.project-page .photo-credit { color: #fff; font-size: 14px; font-weight: 400; line-height: 1.6; }
+.project-page .photo-credit a { color: inherit; }
 .project-page .gallery-grid { gap: 20px; }
 .project-page .gallery-grid img { display: block; height: auto; }
 .project-page .gallery-grid figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
